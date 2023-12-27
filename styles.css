@@ -1,7 +1,7 @@
 body,
 html{
-    height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -9,14 +9,10 @@ html{
 .container{
     height: 100%;
     display: grid;
-    grid-template-columns: 320px 90%;
+    grid-template-columns: 320px 77.2%;
     grid-template-rows: 100px 100px 500px 100px;
 }
 
-.blur{
-    height: 40px;
-    width: 40px;
-}
 
 .container div{
     padding: 15px;
@@ -78,10 +74,61 @@ html{
 }
 
 .browse{
+    grid-column: 2/4;
     background-color: white;
     display: flex;
-    flex: 1;
+    flex-wrap: wrap;
+    max-width: 100%;
+    grid-row: 1/3;
 }
+
+.search-bar>input{
+    border-radius: 18px;
+    border-style: none;
+    margin-left: -24px;
+    padding-right: 311PX;
+    background: lightgrey;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    margin-right: 191px;
+}
+
+
+.user-name>a:link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.profile-pic>img{
+    height: 64px;
+    margin-top: -16px;
+}
+
+.feed-name{
+    display: flex;
+}
+
+.feed-name>img{
+    height: 91px;
+    margin-top: -30px;
+}
+
+.hello-text{
+    font-weight: 700;
+    margin-top: -48px;
+}
+
+
+.hello-text div:last-child{
+    font-size: 23px;
+    margin-top: -63px;
+    margin-right: 269px;
+}
+
 
 .feed{
     background-color: #dbeafe;
@@ -94,4 +141,5 @@ button{
     color: white;
     border-style: none;
     font-weight: 700;
+    margin-top: 7px;
 }
